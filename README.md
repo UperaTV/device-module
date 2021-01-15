@@ -46,6 +46,7 @@ context.isDesktop
 context.isMobile
 context.isTablet
 context.isMobileOrTablet
+context.isTV
 context.isDesktopOrTablet
 context.isIos
 context.isWindows
@@ -56,6 +57,7 @@ instance.$device.isDesktop
 instance.$device.isMobile
 instance.$device.isTablet
 instance.$device.isMobileOrTablet
+instance.$device.isTV
 instance.$device.isDesktopOrTablet
 instance.$device.isIos
 instance.$device.isWindows
@@ -63,24 +65,6 @@ instance.$device.isMacOS
 instance.$device.isAndroid
 ```
 
-## CloudFront Support
-
-If a user-agent is 'Amazon CloudFront', this module checks
-the both headers 'CloudFront-Is-Mobile-Viewer' and 'CloudFront-Is-Tablet-Viewer'.
-
-Here are the details about the headers:
-https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html#header-caching-web-device
-
-### Caution
-
-`isIos`, `isWindows` and `isMacOS` flags are not available with CloudFront.
-
-## Cloudflare Support
-
-This module checks the header 'CF-Device-Type'.
-
-Here are the details about the header:
-https://support.cloudflare.com/hc/en-us/articles/229373388-Cache-Content-by-Device-Type-Mobile-Tablet-Desktop-
 
 ## Usage
 
@@ -94,6 +78,9 @@ https://support.cloudflare.com/hc/en-us/articles/229373388-Cache-Content-by-Devi
 		</div>
 		<div v-else-if="$device.isTablet">
 			Tablet
+		</div>
+		<div v-else-if="$device.isTV">
+			TV
 		</div>
 		<div v-else>
 			Mobile
