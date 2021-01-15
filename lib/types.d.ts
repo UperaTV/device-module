@@ -6,6 +6,7 @@ interface Device {
   isAndroid: boolean
   isMobile: boolean
   isMobileOrTablet: boolean
+  isTV: boolean
   isDesktopOrTablet: boolean
   isTablet: boolean
   isWindows: boolean
@@ -19,6 +20,7 @@ declare module '@nuxt/vue-app' {
     isAndroid: boolean
     isMobile: boolean
     isMobileOrTablet: boolean
+    isTV: boolean
     isDesktopOrTablet: boolean
     isTablet: boolean
     isWindows: boolean
@@ -38,6 +40,7 @@ declare module '@nuxt/types' {
     isAndroid: boolean
     isMobile: boolean
     isMobileOrTablet: boolean
+    isTV: boolean
     isDesktopOrTablet: boolean
     isTablet: boolean
     isWindows: boolean
