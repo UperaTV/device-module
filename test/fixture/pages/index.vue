@@ -4,6 +4,7 @@
     <div v-if="$device.isDesktop">isDesktop</div>
     <div v-if="$device.isTablet">isTablet</div>
     <div v-if="$device.isMobileOrTablet">isMobileOrTablet</div>
+    <div v-if="$device.isTV">isTV</div>
     <div v-if="$device.isIos">isIos</div>
     <div v-if="$device.isAndroid">isAndroid</div>
     <div v-if="$device.isWindows">isWindows</div>
