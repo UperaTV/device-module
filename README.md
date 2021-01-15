@@ -42,62 +42,19 @@ This module injects flags that indicate a device type into the context and the c
 You can use these flags to detect the device type.
 
 ```js
-context.isDesktop
-context.isMobile
-context.isTablet
-context.isMobileOrTablet
 context.isTV
-context.isDesktopOrTablet
 context.isIos
 context.isWindows
 context.isMacOS
 context.isAndroid
 
-instance.$device.isDesktop
-instance.$device.isMobile
-instance.$device.isTablet
-instance.$device.isMobileOrTablet
 instance.$device.isTV
-instance.$device.isDesktopOrTablet
 instance.$device.isIos
 instance.$device.isWindows
 instance.$device.isMacOS
 instance.$device.isAndroid
 ```
 
-
-## Usage
-
-### Switch a view
-
-```html
-<template>
-	<section>
-		<div v-if="$device.isDesktop">
-			Desktop
-		</div>
-		<div v-else-if="$device.isTablet">
-			Tablet
-		</div>
-		<div v-else-if="$device.isTV">
-			TV
-		</div>
-		<div v-else>
-			Mobile
-		</div>
-	</section>
-</template>
-```
-
-Ofcourse, you can use `$device` via `this` in a script.
-
-### Change a layout dynamically
-
-```js
-export default {
-	layout: (ctx) => ctx.isMobile ? 'mobile' : 'default'
-}
-```
 
 ## License
 
